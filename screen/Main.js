@@ -56,7 +56,7 @@ export default function Main(props) {
             />
           </TouchableOpacity>
 
-          <Text>Products</Text>
+          <Text style={styles.productTitle}>Products</Text>
           <View style={styles.productWrap}>
             {products &&
               products.map((product, index) => {
@@ -79,10 +79,10 @@ export default function Main(props) {
                       </View>
                       <View style={styles.productFooter}>
                         <View style={styles.productSeller}>
-                          <Image source={{ uri: `https://cdn-icons-png.flaticon.com/512/10277/10277946.png` }} style={styles.productAvatar} />
-                          <Text style={styles.productSellerName}>{product.seller}</Text>
+                          <Image source={{ uri: `https://cdn-icons-png.flaticon.com/512/2163/2163350.png` }} style={styles.productAvatar} />
+                          <Text style={styles.productSellerName}>4NITURE</Text>
                         </View>
-                        <Text style={styles.productDate}>{dayjs(product.createdAt).fromNow()}</Text>
+                        <Text style={styles.productCategory}>{product.category}</Text>
                       </View>
                     </View>
                   </TouchableOpacity>
@@ -99,6 +99,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#f0f0f0",
+  },
+  productTitle: {
+    fontSize: 24,
+    paddingLeft: 50,
+    paddingTop: 30,
   },
   productWrap: {
     flexDirection: "row",
@@ -137,18 +142,25 @@ const styles = StyleSheet.create({
     padding: 8,
   },
   productName: {
-    fontSize: 16,
+    fontSize: 20,
+    fontWeight: "bold",
+    paddingLeft: 5,
   },
   productPrice: {
-    fontSize: 18,
-    fontWeight: "600",
+    fontSize: 16,
+    fontWeight: "400",
     marginTop: 8,
+    paddingLeft: 5,
   },
   productSellerName: {
-    fontSize: 16,
+    fontSize: 12,
+    marginLeft: 5,
+    fontWeight: "bold",
   },
-  productDate: {
-    fontSize: 16,
+  productCategory: {
+    fontSize: 12,
+    marginRight: 5,
+    fontWeight: "bold",
   },
   productBlur: {
     position: "absolute",
