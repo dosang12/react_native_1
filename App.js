@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, SafeAreaView, Image } from "react-native";
+import { StyleSheet, SafeAreaView, Image, ScrollView } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Main from "./screen/Main";

@@ -3,12 +3,8 @@ import { API_URL } from "../config/constants";
 import axios from "axios";
 import dayjs from "dayjs";
 import React, { useEffect, useState } from "react";
-import { StyleSheet, Text, View, Image, ScrollView, SafeAreaView, Dimensions, TouchableOpacity, Alert } from "react-native";
+import { StyleSheet, Text, View, Image, ScrollView, Dimensions, TouchableOpacity, Alert } from "react-native";
 import Carousel from "react-native-reanimated-carousel";
-import relativeTime from "dayjs/plugin/relativeTime";
-import "dayjs/locale/ko";
-dayjs.locale("ko");
-dayjs.extend(relativeTime);
 
 export default function Main(props) {
   const [products, setProducts] = useState([]);
@@ -108,7 +104,6 @@ const styles = StyleSheet.create({
   productWrap: {
     flexDirection: "row",
     flexWrap: "wrap",
-    height: 500,
     justifyContent: "center",
   },
   productCard: {

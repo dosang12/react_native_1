@@ -29,14 +29,13 @@ const Product = (props) => {
     }
   };
   return (
-    <View style={styles.container}>
+    <View>
       <ScrollView>
-        <View>
+        <View style={styles.container}>
           <Image style={styles.productImage} source={{ uri: `${API_URL}/${product.imageUrl}` }} resizeMode="contain" />
         </View>
         <View style={styles.productSection}>
           <Text style={styles.productName}>{product.name}</Text>
-
           <View style={styles.divider}></View>
           <Text style={styles.productPrice}>{product.price}원</Text>
           <View style={styles.productSeller}>
